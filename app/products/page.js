@@ -1,5 +1,7 @@
-import React from 'react'
+'use client'
+import React, {useState} from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 // ==== icons image === 
@@ -8,7 +10,69 @@ import icon1 from '../../public/Image/icons/automatic-doors-Operators-icon-Dark.
 // === icons === 
 import { IoMdCheckboxOutline } from "react-icons/io";
 
+// ==== product list image === 
+import product1 from '../../public/Image/product list image/product1.jpg'
+import product2 from '../../public/Image/product list image/product2.jpg'
+import product3 from '../../public/Image/product list image/product3.png'
+
 const page = () => {
+
+
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    // ===== product menu handler === 
+  const toggleMenu = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+
+//   ==== product menu ==== 
+  const productsMenu = [
+    {
+      title: 'Entrance Automation',
+      icon : icon1,
+      link: 'Receivers & Remote',
+    },
+    {
+        title: 'Entrance Automation',
+        icon : icon1,
+        link: 'Receivers & Remote',
+    },
+    {
+        title: 'Entrance Automation',
+        icon : icon1,
+        link: 'Receivers & Remote',
+    },
+  ];
+
+// ===== product list item === 
+const productListItem = [
+    {
+        "productImage" : product1,
+        "productTitle" : "Automatic Revolving Door"
+    },
+    {
+        "productImage" : product2,
+        "productTitle" : "Automatic Revolving Door"
+    },
+    {
+        "productImage" : product2,
+        "productTitle" : "Automatic Revolving Door"
+    },
+    {
+        "productImage" : product3,
+        "productTitle" : "Automatic Revolving Door"
+    },
+    {
+        "productImage" : product3,
+        "productTitle" : "Automatic Revolving Door"
+    },
+    {
+        "productImage" : product3,
+        "productTitle" : "Automatic Revolving Door"
+    }
+]
+
+
   return (
     <>
     <section className='productsBanner py-10'>
@@ -49,15 +113,87 @@ const page = () => {
 
 
 
-{/* ===== product list ====  */}
+{/* ============
+product list section 
+============  */}
 
-<section>
-    <div className='container mx-auto'>
+<section className='py-10'>
 
 
+<div className='container mx-auto px-3 flex flex-col md:flex-row gap-10'>
+
+{/* ====    ==== product list ===  */}
+<div className='basis-[65%]'>
 
 
+    <h1 className='text-lg font-semibold mb-4'>Showing all 5 results</h1>
+
+    <div className='grid grid-cols-2 md:grid-cols-3 gap-8'>
+        {productListItem.map((list) => (
+            <div className='w-full border p-2 border-gray-300 rounded-md'>
+                <Link href={'#'} className=' p-3 rounded-sm overflow-hidden'>
+                <Image className='w-full rounded-sm hover:-translate-y-1 duration-200 ease-in-out overflow-hidden object-cover' src={list.productImage} width={100} height={100} alt='maxWelldoor' />
+                <h1 className='text-lg font-semibold my-1'> {list.productTitle} </h1>
+            </Link>
+            <div className='text-center'>
+            <Link href={'#'} className='bg-gray-700 p-2 text-white font-medium rounded-sm hover:bg-white hover:text-black border border-gray-300 duration-200 ease-in-out px-6 text-sm mb-2 inline-block'>Read More</Link>
+            </div>
+            </div>
+        ))}
     </div>
+
+
+</div>
+
+{/* ==== prodcut menu ===  */}
+
+<div className=" p-6 basis-[35%]">
+      <div className="space-y-4 border border-gray-300 rounded-md p-3">
+        {productsMenu.map((list, index) => (
+          <div key={index} className="border-b pb-4">
+            <button
+              onClick={() => toggleMenu(index)}
+              className="w-full text-left flex justify-between items-center focus:outline-none"
+            >
+              <span className="text-lg font-medium">{list.title}</span>
+              <svg
+                className={`w-6 h-6 transform transition-transform duration-300 ${
+                  index === activeIndex ? 'rotate-180' : ''
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                index === activeIndex ? 'max-h-screen' : 'max-h-0'
+              }`}
+            >
+              <Link href={'#'} className='mt-2 text-gray-600 flex gap-2'>
+                <Image src={list.icon} width={20} height={20} alt='maxWelldoor' />
+                <span> {list.link} </span>
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+
+
+</div>
+
+
+
 </section>
 
 
