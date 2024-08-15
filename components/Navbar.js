@@ -102,7 +102,7 @@ const Navbar = () => {
 
                         {/* ==== end mobile bar ===  */}
                         <div className='hidden lg:flex md:items-center md:justify-between md:gap-40'>
-                            <div className=' hidden md:flex items-center justify-center gap-2'>
+                            <div className=' hidden lg:flex items-center justify-center gap-2'>
                                 <FaPhoneAlt className='text-2xl text-red-600' />
                                 <div className='flex flex-col'>
                                     <span className='text-xl'>Reach Us</span>
@@ -136,7 +136,7 @@ const Navbar = () => {
                 </div>
             </header>
 
-            <nav className='bg-gray-800 text-white py-4 hidden md:block'>
+            <nav className='bg-gray-800 text-white py-4 hidden lg:block'>
                 <div className='container mx-auto px-3'>
                     <div className='flex items-center justify-between'>
                         <Link href={'#'} className='uppercase font-medium hover:text-red-600'>Home</Link>
