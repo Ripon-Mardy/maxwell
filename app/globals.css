@@ -13,12 +13,21 @@
     border-radius: 5px;
 }
 
-.footerBgImg
-{
-    background: url('../public/Image/noisy.png');
+/* Add this CSS to your global styles or module CSS */
+.header-gradient {
+    background: linear-gradient(to right, white 50%, rgba(173, 216, 230, 0.8), rgba(220, 220, 220, 0.8), rgba(240, 240, 240, 0.8), rgba(105, 105, 105, 0.8));
 }
-.productsBanner
-{
-    background: url('../public/Image/products Banner.webp') center center no-repeat;
+
+
+div.list-disc>div>ul {
+    list-style: disc;
+}
+
+.footerBgImg {
+    background: url('../public/images/noisy.png');
+}
+
+.productsBanner {
+    background: url('../public/images/products_banner.webp') center center no-repeat;
     background-size: cover;
 }

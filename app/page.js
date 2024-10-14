@@ -1,18 +1,18 @@
 import Brands from "@/components/Brands";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
-import Latest_projects from "@/components/Latest_projects";
-import Product from "@/components/Product";
+import OurProducts from "@/components/OurProducts";
+import ServiceSection from "@/components/ServiceSection";
 import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
     <>
       <Slider />
-      <Product/>
-      <Brands/>
-      <Latest_projects/>
-      <Clients/>
+      <ServiceSection/>
+      <OurProducts/>
+      <Brands/>      
+      {/* <Clients/> */}
       <Contact/>
     </>
   );
