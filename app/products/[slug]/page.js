@@ -199,7 +199,7 @@ const ProductSingle = ({ params }) => {
                                         src={product.featured_image}
                                         width={100}
                                         height={100}
-                                        alt="Featured Product"
+                                        alt={product?.name}
                                         onClick={() => setProductImage(product.featured_image)}
                                         className={`cursor-pointer w-16 h-16 object-cover border ${product.featured_image === productImage ? 'border-blue-500' : 'border-gray-300'}`}
                                     />
@@ -275,7 +275,7 @@ const ProductSingle = ({ params }) => {
                                 </p>
                             </div>
                         )}
-                        <Link href={'#'} onClick={openPopUp} className='bg-yellow-400 p-2 rounded-sm inline-block my-4 px-4 font-semibold border border-gray-400'>Get a free quote</Link>
+                        <Link href={'#'} onClick={openPopUp} className='bg-yellow-300 hover:bg-black hover:text-yellow-300 font-semibold md:shadow-md p-1 px-4 border border-yellow-500 inline-block'>Get a free quote</Link>
                     </div>
                     <div className="basis-1/4">
                         <video className='w-full rounded-sm' src="#" width={300} height={200} controls></video>
@@ -305,11 +305,6 @@ const ProductSingle = ({ params }) => {
                             })()}
                         </div>
                     </div>
-
-                </div>
-
-                {/* Product Image Slider */}
-                <div className="container mx-auto p-6 basis-[40%]">
 
                 </div>
             </div>

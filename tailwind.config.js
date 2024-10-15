@@ -7,13 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      textColor : {
-        "textHeadingColor" : "#E14658",
-        "paracolor" : "#C0B3A0",
-        "textsecondHeadingColor" : "#3F3250"
+      textColor: {
+        "textHeadingColor": "#E14658",
+        "paracolor": "#C0B3A0",
+        "textsecondHeadingColor": "#3F3250"
       },
-      backgroundColor : {
-        "footerBackgroundColor" : "#22252C"
+      backgroundColor: {
+        "footerBackgroundColor": "#22252C"
       }
     },
   },

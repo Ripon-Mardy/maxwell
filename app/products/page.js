@@ -90,12 +90,12 @@ const Products = () => {
               {products.map((product, index) => (
                 <div key={index} className='w-full border border-gray-300 rounded-md'>
                   <Link href={`/products/${product.slug}`} className='rounded-sm overflow-hidden'>
-                    <Image className='w-full rounded-sm hover:-translate-y-1 duration-200 ease-in-out overflow-hidden object-cover' src={product.featured_image} width={100} height={100} alt='maxWelldoor' />
+                    <Image className='w-full rounded-sm hover:-translate-y-1 duration-200 ease-in-out overflow-hidden object-cover' src={product.featured_image} width={500} height={500} alt='maxWelldoor' />
 
                   </Link>
                   <div className='p-2'>
                     <h2 className='text-lg font-semibold my-1'> {product.name} </h2>
-                    <Link href={`/products/${product.slug}`} className='bg-gray-700 p-2 text-white font-medium rounded-sm hover:bg-white hover:text-black border border-gray-300 duration-200 ease-in-out px-6 text-sm mb-2 inline-block'>
+                    <Link href={`/products/${product.slug}`} className='bg-yellow-300  hover:bg-black hover:text-yellow-300 font-semibold md:shadow-md p-1 px-4 border border-yellow-500 inline-block '>
                       Read More
                     </Link>
                   </div>

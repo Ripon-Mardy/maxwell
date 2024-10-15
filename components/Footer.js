@@ -6,7 +6,7 @@ import axiosInstance from '@/helpers/axiosInstance';
 import { getMetaValueByMetaName } from '@/helpers/metaHelpers';
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
 
-import automaticdu from '@/public/images/automaticdooruae.jpeg';
+import automaticdu from '@/public/images/automaticdooruae.png';
 
 const Footer = () => {
   const [settings, setSettings] = useState(null);
@@ -41,7 +41,7 @@ const Footer = () => {
   const twitterLink = getMetaValueByMetaName(settings, 'twitter_url') || '#';
 
   // Contact details with fallbacks
-  const hotline = getMetaValueByMetaName(settings, 'company_phone') || '052 730 6525';
+  const hotline = getMetaValueByMetaName(settings, 'company_phone') || '0543828464';
   const email = getMetaValueByMetaName(settings, 'company_email') || 'info@mail.com';
   const address = getMetaValueByMetaName(settings, 'footer_content') || 'Your Address Here';
   const mapLink = getMetaValueByMetaName(settings, 'office_location') || '#'; // Update this if you have a map link
@@ -54,12 +54,12 @@ const Footer = () => {
             <Link href={'/'}>
               <Image
                 src={automaticdu}
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 alt='Automatic Door UAE'
               />
             </Link>
-            <p className='text-white'>Automatic Door UAE</p>
+            <p className='text-white'>Moen Al Saad Automatic Door UAE</p>
             <p className='text-sm text-white'>LLC. © 2020 All rights reserved.</p>
             <div className='flex items-center gap-3 text-white justify-center'>
               <h1>Follow us</h1>
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col gap-2'>
-            <h2 className='text-2xl font-semibold text-yellow-300'>
+            <h2 className='text-xl font-semibold text-yellow-300'>
               <Link href={mapLink}>Quick Navigations</Link>
             </h2>
             {menuItems.map((item, index) => (
@@ -81,7 +81,7 @@ const Footer = () => {
             ))}
           </div>
           <div className='flex flex-col gap-2'>
-            <h2 className='text-2xl capitalize text-yellow-300 font-semibold'>Contact Details</h2>
+            <h2 className='text-xl capitalize text-yellow-300 font-semibold'>Contact Details</h2>
             <p className='text-paracolor'>{address}</p>
             <h3 className='text-yellow-300 font-semibold text-xl'>Hotline:</h3>
             <Link className='text-paracolor' href={`tel:${hotline}`}>{hotline}</Link>
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           <div className='flex flex-col gap-2'>
-            <h2 className='text-2xl font-semibold text-yellow-300'><Link href={mapLink}>Find Us</Link></h2>
+            <h2 className='text-xl font-semibold text-yellow-300'><Link href={mapLink}>Find Us</Link></h2>
             {/* You can add additional info here if needed */}
           </div>
         </div>

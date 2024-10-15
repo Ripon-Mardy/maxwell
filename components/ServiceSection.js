@@ -36,7 +36,7 @@ const ServiceSection = () => {
 
                     <div className='grid grid-cols-2 md:grid-cols-3 gap-6 pt-10'>
                         {services.map((product) => (
-                            <div>
+                            <div key={product?.id}>
                                 <Link href={`/${product?.slug}`}>                                    
                                     <Image
                                         src={product.featured_image}

@@ -42,8 +42,10 @@ const Brands = () => {
                     {/* ==== brands ====  */}
                     <div className='grid grid-cols-3 gap-8 md:gap-5 pt-10 md:grid-cols-4 xl:grid-cols-8'>
                         {brandsList.map((brand, index) => (
-                            <div className='flex flex-wrap flex-row'>
-                                <Image src={brand?.image} className='aspect-auto object-contain mix-blend-color-burn mx-auto' width={400} height={400} alt={brand?.name} priority={false} />
+                            <div key={index} className='flex flex-wrap flex-row'>
+                                <Link href={`/category/${brand?.slug}`}>
+                                    <Image src={brand?.image} className='aspect-auto object-contain mix-blend-color-burn mx-auto' width={400} height={400} alt={brand?.name} priority={false} />
+                                </Link>
                             </div>
                         ))}
                     </div>

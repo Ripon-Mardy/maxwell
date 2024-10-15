@@ -8,7 +8,8 @@ import { debounce } from 'lodash';
 import { getMetaValueByMetaName } from '@/helpers/metaHelpers';
 
 // ==== images ==== 
-import automaticdu from '@/public/images/automaticdooruae.jpeg';
+import automaticdu from '@/public/images/automaticdooruae.png';
+import moenalsaad from '@/public/images/logo.png';
 
 // ==== icons ===== 
 import { FaPhoneAlt, FaFacebookF, FaLinkedin, FaYoutube, FaTimes } from "react-icons/fa";
@@ -86,12 +87,16 @@ const Navbar = () => {
 
     return (
         <>
-            <header className='py-1 header-gradient'>
+            <header className='py-1 md:header-gradient'>
                 <div className='container mx-auto'>
-                    <div className='flex items-center justify-between px-3'>
+                    <div className='flex items-center justify-between px-3 border-b border-b-slate-400 md:border-b-0 md:border-white'>
                         <div className='w-fit'>
-                            <Image className='hidden md:block' src={automaticdu} width={120} height={120} alt='automaticdu' />
-                            <Image className='md:hidden' src={automaticdu} width={200} height={200} alt='automaticdu' />
+                            <Link href={'/'}>
+                                <Image className='hidden md:block' src={moenalsaad} width={340} height={102} alt='automaticdu' />
+                            </Link>
+                            <Link href={'/'}>
+                                <Image className='md:hidden' src={moenalsaad} width={250} height={102} alt='automaticdu' />
+                            </Link>
                         </div>
 
                         {/* Mobile menu bar */}
@@ -102,20 +107,20 @@ const Navbar = () => {
                         {/* Mobile menu */}
                         <AnimatePresence>
                             {isOpen && (
-                                <div className='absolute left-0 top-0 w-full h-full bg-black bg-opacity-75 overflow-x-hidden bg-fixed'>
+                                <div className='absolute left-0 top-0 w-full h-full bg-black-900 overflow-x-hidden bg-fixed'>
                                     <motion.div
                                         initial={{ x: '100%' }}
                                         animate={{ x: 0 }}
                                         transition={{ duration: 0.3 }}
                                         exit={{ x: '100%' }}
-                                        className='absolute right-0 top-0 w-1/2 backdrop-blur-xl text-white h-screen py-8 overflow-y-auto bg-fixed z-10'
+                                        className='absolute right-0 top-0 w-1/2 backdrop-blur-xl bg-black text-white h-screen py-8 overflow-y-auto bg-fixed z-10'
                                     >
                                         <div onClick={handlemenuBar} className='absolute left-2 top-2 text-xl cursor-pointer'>
                                             <FaTimes />
                                         </div>
                                         <div className='text-center'>
                                             <Image className='mx-auto' src={automaticdu} width={100} height={100} alt='maxWelldoor' />
-                                            <button className='bg-yellow-400 p-2 px-6 rounded-sm text-center border mt-4 uppercase hover:bg-white hover:text-black duration-100 ease-in-out hover:border font-medium'>
+                                            <button className='bg-yellow-300 border-yellow-500 p-2 px-6 rounded-sm text-center border mt-4 uppercase hover:bg-white hover:text-black duration-100 ease-in-out hover:border font-medium'>
                                                 Call us now
                                             </button>
                                         </div>

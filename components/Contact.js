@@ -56,11 +56,11 @@ const Contact = () => {
             <section className='py-10'>
                 <div className='container mx-auto px-3 grid gap-8 md:grid-cols-2'>
                     <div className='md:w-3/4 mx-auto'>
-                        <h1 className='text-2xl font-medium text-center'>Our Nationwide Sales & Technical <br /> Support is on The Line.</h1>
+                        <h2 className="text-xl font-medium text-center">Our Nationwide Sales &amp; Technical Support Team is Ready to Assist You</h2>
                         <div className='w-full h-0.5 bg-red-200 mt-2'></div>
 
                         <div className='mt-5'>
-                            <h1 className='text-xl font-semibold'>Our Branch is Available to Visit in:</h1>
+                            <h2 className='text-xl font-semibold'>Our branch is available to visit in:</h2>
                             <ul className='list-disc pl-5 flex flex-col gap-1 mt-2'>
                                 <li>Abu Dhabi</li>
                                 <li>Dubai</li>
@@ -70,12 +70,10 @@ const Contact = () => {
                             </ul>
                         </div>
                     </div>
-
-                    {/* === contact form ===  */}
                     <div>
-                        <div className='basis-1/3 w-full shadow-md p-5 bg-white'>
-                            <div className='bg-gray-900 text-white p-4 py-5 rounded-md'>
-                                <div class="text-center"><h1 class="text-3xl font-medium">Contact Us</h1><div class="w-full bg-gray-600 h-0.5 mb-6 mt-2"></div></div>
+                        <div className='basis-1/3 w-full footerBgImg'>
+                            <div className='bg-gray-900 text-white p-4 py-5  rounded-md'>
+                                <div className="text-center"><h1 className="text-3xl font-medium">Contact Us</h1><div className="w-full bg-gray-600 h-0.5 mb-6 mt-2"></div></div>
                                 <form onSubmit={handleSubmitForm} className='flex flex-col gap-5'>
                                     {/* Hidden Fields */}
                                     <input type="hidden" value={formData.subject} name="subject" required />

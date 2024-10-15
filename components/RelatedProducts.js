@@ -49,9 +49,9 @@ const RelatedProducts = () => {
 
     return (
         <section className='py-10'>
-            <div className='container mx-auto px-3'>
+            <div className='container mx-auto'>
                 <div>
-                    <h1 className='text-2xl capitalize text-red-600 font-semibold'>Related products</h1>
+                    <h1 className='text-2xl capitalize font-semibold'>Related products</h1>
                     <div className='w-full h-0.5 bg-red-300 mb-5 mt-1'></div>
                 </div>
 
@@ -61,16 +61,16 @@ const RelatedProducts = () => {
                             <Link href={`/products/${product?.slug}`} className="block">
                                 <Image
                                     className='w-full object-cover rounded-sm hover:-translate-y-1 duration-200 ease-in-out'
-                                    src={product?.featured_image}
-                                    width={100}
-                                    height={100}
+                                    src={product?.featured_image}                                    
+                                    width={300}
+                                    height={300}
                                     alt={product?.name}
                                 />
                                 <h1 className='text-center text-gray-700 text-lg font-semibold pt-1'>
                                     {product?.name}
                                 </h1>
                                 <div className='text-center pb-2'>
-                                    <Link href={`/products/${product?.slug}`} className='bg-yellow-300 font-semibold p-1 px-4 border border-gray-300 inline-block'>
+                                    <Link href={`/products/${product?.slug}`} className='bg-yellow-300 hover:bg-black hover:text-yellow-300 font-semibold md:shadow-md p-1 px-4 border border-yellow-500 inline-block'>
                                         Read More
                                     </Link>
                                 </div>
